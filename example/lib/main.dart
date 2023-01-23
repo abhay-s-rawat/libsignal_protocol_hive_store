@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive/hive.dart';
 import 'package:libsignal_protocol_hive_store/libsignal_protocol_hive_store.dart';
+import 'package:path_provider/path_provider.dart';
 import 'homepage.dart';
 
 void main() async {
@@ -10,8 +13,13 @@ void main() async {
 }
 
 initHive() async {
-  await Hive.initFlutter();
-  await HiveSignalStore.initialize(Hive);
+  Directory dir = await getApplicationSupportDirectory();
+  print(dir.path);
+  Hive.init(
+    dir.path,
+    backendPreference: HiveStorageBackendPreference.native,
+  );
+  await HiveSignalStore.initialize();
 }
 
 class MyApp extends StatelessWidget {

@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
-
 import 'signal_group_screen.dart';
 import 'signalscreen.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String encKey = 'jBLoTQlsNCub74ZqTUE5yKQpqLngv4xw6Z2IRj2bDPQ=';
+
+  @override
+  void initState() {
+    super.initState();
+    /* List<int> temp = Hive.generateSecureKey();
+    encKey = base64Encode(temp);
+    print(encKey); */
+  }
 
   @override
   Widget build(BuildContext context) {
