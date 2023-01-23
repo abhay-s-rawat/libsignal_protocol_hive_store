@@ -63,6 +63,11 @@ class HiveSignalKeyStoreModel extends HiveObject {
 
   String get getServerPreKeyBundle {
     //Send to server
+    return jsonEncode(getServerPreKeyBundleMap);
+  }
+
+  Map get getServerPreKeyBundleMap {
+    //Send to server
     Map<String, dynamic> req = {};
     req['registrationId'] = registrationId;
     req['identityKey'] = base64Encode(
@@ -87,6 +92,6 @@ class HiveSignalKeyStoreModel extends HiveObject {
       pKeysList.add(pKeys);
     }
     req['preKeys'] = pKeysList;
-    return jsonEncode(req);
+    return req;
   }
 }

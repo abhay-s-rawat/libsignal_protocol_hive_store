@@ -1,6 +1,6 @@
-## 1.0.0-dev.1
+## 0.0.2
 
-* Bumping to v1 due to hive 3.
+* Minor changes
 ## 0.0.1
 
 * Initial release.

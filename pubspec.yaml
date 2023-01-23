@@ -1,6 +1,6 @@
 name: libsignal_protocol_hive_store
 description: This package is for developers who use hive with libsignal protocol.
-version: 1.0.0-dev.1
+version: 0.0.2
 homepage: https://github.com/abhay-s-rawat/libsignal_protocol_hive_store
 
 environment:
@@ -11,8 +11,8 @@ dependencies:
   equatable: ^2.0.5
   flutter:
     sdk: flutter
-  hive: ^3.0.0-dev
-  hive_flutter: ^2.0.0-dev
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
   libsignal_protocol_dart: ^0.6.5
   collection: ^1.16.0
 
@@ -27,8 +27,6 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-dependency_overrides:
-  hive: ^3.0.0-dev
 
 flutter:
 
